@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+// #include <ext/pb_ds/detail/resize_policy/hash_standard_resize_policy_imp.hpp>
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+// using namespace __gnu_pbds;
+
+using namespace std;
+
+#define ff first
+#define ss second
+#define int long long
+#define pb push back
+#define mp make_pair
+#define pii pair<int, int>
+#define vi vector<int>
+#define mii map<int, int>
+#define pqb priority_queue<int>
+#define pqs priority_queue<int, vi, greater<int> >
+#define setbits(x)  __builtin_popcountll(x)
+#define zrobits(x) __builtin_ctzll(x)
+#define mod 1000000007
+#define inf 1e18
+#define ps(x, y) fixed<<setprecision(y)<< x
+#define mk(arr, n, type) type *arr = new type[n];
+#define w(x)   int x; cin>>x; while(x--)
+
+
+
+void coderev()
+{
+	int n;
+	cin >> n;
+	vector<pair<int, int>> p;
+	for (int i = 0; i < n; i++) {
+		int x, y;
+		cin >> x >> y;
+		p.push_back({x, y});
+	}
+	sort(p.begin(), p.end());
+	int minEl = p[0].second;
+	for (int i = 1; i < p.size(); i++) {
+		if (p[i].second < minEl) {
+			cout << "Happy Alex" << endl;
+			return;
+		}
+		minEl = p[i].second;
+	}
+	cout << "Poor Alex" << endl;
+
+}
+
+int32_t main() {
+	// w(x) {
+	coderev();
+	// }
+}
+
